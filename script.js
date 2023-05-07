@@ -24,7 +24,7 @@ var generatePasswordElement = document.querySelector("#generated-password");
 
   var getNumber = () => {
     return Math.floor(Math.random() * 10).toString();
-  }''
+  }
 
   var getSymbol = () => {
     const symbols = "(){}=<>/,.!@#$%*+-";
