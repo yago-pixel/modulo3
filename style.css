@@ -131,7 +131,7 @@ button[disabled] {
 }
 
 @media (max-width: 500px) {
-  .btn {
+  .button {
     font-size: 0.8rem;
   }
 }
