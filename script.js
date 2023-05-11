@@ -1,71 +1,41 @@
 // Assignment Code
-var generateButton = document.querySelector("#generate-password");
-var generatePasswordElement = document.querySelector("#generated-password");
+var generateBtn = document.querySelector("#generate");
+var genaretepasswordElement = document.querySelector("generated-password");
 
 // Write password to the #password input
-  var password = generatePassword(
-    document.querySelector
-  );
-  var generatePasswordContainer = document.querySelector("#generate-options");
-  var lengthInput = document.querySelector("#length");
-  var lettersInput = document.querySelector("#letters");
-  var numbersInput = document.querySelector("#numbers");
-  var symbolsInput = document.querySelector("#symbols");
-  var copyPasswordButton = document.querySelector("#copy-password");
+function writePassword() {
+  console.log ('generatePassword');
 
-  // Function
-  var getLetterLowerCase = () => {
-    return String.fromCharCode(Math.floor(math.random() * 26) + 97);
-  };
-
-  var getLetterUpperCase = () => {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-  };
-
-  var getNumber = () => {
-    return Math.floor(Math.random() * 10).toString();
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  
+  function getLetterLowerCase () {
+   return String.fromCharCode(Math.floor(math.random() * 26) + 97);
   }
 
-  var getSymbol = () => {
-    const symbols = "(){}=<>/,.!@#$%*+-";
-    return symbols[Math.floor(Math.random() * symbols.length)];
-  };
+  function getLetterUpperCase (){
+   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+  }
 
-  var generatePassword = (getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol) => {
-    let password = ""
-    var passwordLength = 8;
+  function getNumber (){
+  return Math.floor(Math.random() * 10).toString();
+  }
 
-    var generators = [
-      getLetterLowerCase,
-      getLetterUpperCase,
-      getNumber,
-      getSymbol,
-    ];
+function getSymbol (){
+  const symbols = "(){}=<>/,.!@#$%*+-";
+  return symbols[Math.floor(Math.random() * symbols.length)];
+}
 
-    for (i = 0; i < passwordLength; i = i + 4) {
-      generators.forEach(() => {
-        const randomValue =
-          generators[Math.floor(Math.random * generators.legth)]();
+function generatePassword (){
+  var writePassword = ('getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol');
+  console.log (writePassword);
+} 
 
-        console.log(randomValue);
-      });
-    }
-    password = password.slice(0, passwordLength);
+  passwordText.value = password;
 
-    generatePasswordElement.style.display = "block";
-    generatePasswordElement.querySelector("h4").innerText = password;
-  };
-
-  //var passwordText = document.querySelector("#password");
-
+}
 
 // Add event listener to generate button
-generateButton.addEventListener("click", writePassword => {
-  generatePassword(
-    getLetterLowerCase,
-    getLetterUpperCase,
-    getNumber,
-    getSymbol,
-  )
-});
-
+generateBtn.addEventListener("click", writePassword);
+var response = prompt ('password');
+  console.log (response);
